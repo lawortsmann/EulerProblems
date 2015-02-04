@@ -1,0 +1,137 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4175,        128]
+NotebookOptionsPosition[      3852,        111]
+NotebookOutlinePosition[      4205,        127]
+CellTagsIndexPosition[      4162,        124]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"subs", "=", 
+   RowBox[{"Subsets", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "9", ",", "9", ",", "8", ",", "8", ",", "7", ",", "7", ",", "6", ",", 
+       "6", ",", "5", ",", "5", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "2", ",", "2", ",", "3", ",", "3", ",", "4", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", "10", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ptenNOZ", "=", 
+   RowBox[{
+   "10", " ", "9", " ", "8", " ", "7", " ", "6", " ", "5", " ", "4", " ", "3",
+     " ", "2", " ", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pten1Z", "=", 
+   RowBox[{
+   "9", " ", "9", " ", "8", " ", "7", " ", "6", " ", "5", " ", "4", " ", "3", 
+    " ", "2", " ", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pten2Z", "=", 
+   RowBox[{
+   "8", " ", "9", " ", "7", " ", "6", " ", "5", " ", "4", " ", "3", " ", "2", 
+    " ", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"zero0", "[", "list_", "]"}], ":=", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Mod", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Total", "[", "list", "]"}], "-", 
+        RowBox[{"(", 
+         RowBox[{"90", "-", 
+          RowBox[{"Total", "[", "list", "]"}]}], ")"}]}], ",", "11"}], "]"}], 
+     "\[Equal]", "0"}], ",", "list", ",", 
+    RowBox[{
+     RowBox[{"##", "&"}], "[", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"zero1", "[", "list_", "]"}], ":=", 
+  RowBox[{"Piecewise", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"pten2Z", " ", "ptenNOZ"}], ",", 
+       RowBox[{
+        RowBox[{"Length", "[", 
+         RowBox[{"Cases", "[", 
+          RowBox[{"list", ",", "0"}], "]"}], "]"}], "\[Equal]", "2"}]}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"pten1Z", " ", "ptenNOZ"}], ",", 
+       RowBox[{
+        RowBox[{"Length", "[", 
+         RowBox[{"Cases", "[", 
+          RowBox[{"list", ",", "0"}], "]"}], "]"}], "\[Equal]", "1"}]}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"ptenNOZ", " ", "ptenNOZ"}], " ", ",", 
+       RowBox[{
+        RowBox[{"Length", "[", 
+         RowBox[{"Cases", "[", 
+          RowBox[{"list", ",", "0"}], "]"}], "]"}], "\[Equal]", "0"}]}], 
+      "}"}]}], "}"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Total", "[", 
+  RowBox[{"ParallelMap", "[", 
+   RowBox[{"zero1", ",", 
+    RowBox[{"ParallelMap", "[", 
+     RowBox[{"zero0", ",", "subs"}], "]"}]}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.631543848310603*^9, 3.631543941761307*^9}, {
+   3.631544031302246*^9, 3.6315440583667603`*^9}, {3.631544101872591*^9, 
+   3.631544117629178*^9}, {3.631544262487649*^9, 3.631544268104649*^9}, {
+   3.631544324543231*^9, 3.631544332748522*^9}, 3.631545191331787*^9, {
+   3.63200042853686*^9, 3.6320004618133383`*^9}}],
+
+Cell[BoxData["162644258230272000"], "Output",
+ CellChangeTimes->{
+  3.631543835016426*^9, {3.631543918569336*^9, 3.6315439441995487`*^9}, 
+   3.631544060851946*^9, 3.6315441627127457`*^9, 3.631544270960185*^9, 
+   3.6315443179027348`*^9, 3.631544353586135*^9, 3.6315443897418547`*^9, 
+   3.631545206903982*^9, 3.632000368502285*^9, 3.6320004649617033`*^9}]
+}, Open  ]]
+},
+WindowSize->{1290, 902},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2897, 79, 148, "Input"],
+Cell[3480, 103, 356, 5, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

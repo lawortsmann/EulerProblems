@@ -1,0 +1,84 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2072,         74]
+NotebookOptionsPosition[      1751,         57]
+NotebookOutlinePosition[      2105,         73]
+CellTagsIndexPosition[      2062,         70]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Max", "[", 
+  RowBox[{"Flatten", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"sum", "=", 
+        RowBox[{"Sum", "[", 
+         RowBox[{
+          RowBox[{"Prime", "[", "i", "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "m", ",", "n"}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"PrimeQ", "[", "sum", "]"}], "&&", 
+          RowBox[{"sum", "<", "1000000"}]}], ",", "sum", ",", 
+         RowBox[{
+          RowBox[{"##", "&"}], "[", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"m", ",", "1", ",", "10"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "500", ",", "600"}], "}"}]}], "]"}], ",", "1"}], 
+   "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6320009969491043`*^9, 3.632001301735948*^9}}],
+
+Cell[BoxData["997651"], "Output",
+ CellChangeTimes->{{3.63200101641905*^9, 3.632001080859427*^9}, {
+  3.632001143349902*^9, 3.632001200566204*^9}, {3.632001250657048*^9, 
+  3.632001306070763*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 902},
+WindowMargins->{{151, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 956, 27, 80, "Input"],
+Cell[1539, 51, 196, 3, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
